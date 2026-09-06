@@ -778,27 +778,27 @@ The dashboard is designed to answer three important questions:
 
 ## Dashboard
 
-![Sentinel Dashboard](./screenshots/dashboard.png)
+![Sentinel Dashboard](./screenshots/dashboard.jpeg)
 
 ## Live Traffic
 
-![Live API Traffic](./screenshots/live-traffic.png)
+![Live API Traffic](./screenshots/live-traffic.jpeg)
 
 ## Threat Detection
 
-![Threat Detection](./screenshots/threat-detection.png)
+![Threat Detection](./screenshots/threat-detection.jpeg)
 
 ## API Security Scanner
 
-![API Security Scanner](./screenshots/api-scanner.png)
+![API Security Scanner](./screenshots/api-scanner.jpeg)
 
 ## Incident Management
 
-![Incident Management](./screenshots/incidents.png)
+![Incident Management](./screenshots/incidents.jpeg)
 
 ## Security Policies
 
-![Security Policies](./screenshots/policies.png)
+![Security Policies](./screenshots/policies.jpeg)
 
 ---
 
