@@ -1055,13 +1055,11 @@ Sentinel connects **development-time security with runtime protection**.
 
 ---
 
-# 👥 Team
+# 👥 Team Mantrayle
 
-| Member | 
-|---|---|
-| **Shivam Singh** | 
-| **Rajeev Yadav** | 
-| **Aarna Singh** | 
+- **Shivam Singh**
+- **Rajeev Yadav**
+- **Aarna Singh**
 
 ---
 
