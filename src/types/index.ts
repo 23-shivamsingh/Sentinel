@@ -1,0 +1,10 @@
+export type Severity = "CRITICAL" | "HIGH" | "MEDIUM" | "LOW" | "INFO";
+export type OwaspCategory = "BOLA" | "Broken Authentication" | "BOPLA" | "Unrestricted Resource Consumption" | "BFLA" | "SSRF" | "Security Misconfiguration" | "Improper Inventory Management" | "Unsafe Consumption of APIs" | "Injection" | "Anomalous Behavior" | string;
+export type ActionType = "ALLOW" | "MONITOR" | "RATE_LIMIT" | "BLOCK" | "TEMPORARY_BLOCK" | "ALERT";
+
+export interface RequestEvent { id: string; timestamp: string; method: string; path: string; status: number; latencyMs: number; sourceIp: string; user: string | null; session: string | null; riskScore: number; decision: ActionType; threats: ThreatEvent[]; headers: Record<string, string>; queryParams: Record<string, string>; bodySize: number; }
+export interface ThreatEvent { id: string; requestId: string; category: OwaspCategory; severity: Severity; confidence: number; evidence: string; signals: string[]; recommendation: string; timestamp: string; }
+export interface Incident { id: string; title: string; severity: Severity; status: "OPEN" | "INVESTIGATING" | "CONTAINED" | "RESOLVED" | "FALSE_POSITIVE" | "CLOSED" | "MITIGATED"; threatType: OwaspCategory; endpoint: string; sourceIp: string; userSession: string | null; riskScore: number; confidence: number; firstSeen: string; lastSeen: string; occurrences: number; actionTaken: ActionType | string; events: ThreatEvent[]; }
+export interface Policy { id: string; name: string; description: string; scope: string; condition: string; action: ActionType; enabled: boolean; }
+export interface ProtectedApi { id: string; name: string; baseUrl: string; environment: "Dev" | "Staging" | "Prod" | string; status: "Healthy" | "Degraded" | "Offline" | string; endpointCount: number; requests24h: number; threats24h: number; securityScore: number; lastActivity: string; }
+export interface ApiEndpoint { id: string; apiId: string; method: string; path: string; authRequired: boolean; roles: string[]; riskLevel: Severity; volume24h: number; threatCount24h: number; lastSeen: string; }
